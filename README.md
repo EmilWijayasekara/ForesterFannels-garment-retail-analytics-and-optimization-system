@@ -6,6 +6,8 @@ Welcome to the ForesterFannels Garment Retail Analytics and Optimization System!
 
 The ForesterFannels Garment Retail Analytics and Optimization System is designed to provide insightful analytics and optimization capabilities for garment retail businesses. This system leverages data to optimize inventory management, pricing strategies, and customer engagement, ultimately enhancing the overall efficiency and profitability of retail operations.
 
+![enter image description here](https://raw.githubusercontent.com/EmilWijayasekara/ForesterFannels-garment-retail-analytics-and-optimization-system/main/images/phase2%20%282%29.jpg)
+
 ### Key Functionalities
 
 1. **Dashboard**: View an overview of key metrics and insights.
@@ -16,5 +18,4 @@ The ForesterFannels Garment Retail Analytics and Optimization System is designed
 
 ## Technologies Used
 
-- **Frontend**: HTML, CSS
-- **Database**: MySQL
+HTML, CSS, MySQL, PHP, Bootstrap
