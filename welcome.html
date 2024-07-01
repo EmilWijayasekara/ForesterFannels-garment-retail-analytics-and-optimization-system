@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Forester Flannels</title>
+  <link rel="stylesheet" href="welcomeStyles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="images/LOGO H WHITE.png" width="200" height="70"
+      alt="Forester Flannels - CSC 209 DBMS Project - Group 01">
+    <nav>
+      <ul class="nav_links">
+        <li><a href="#"></a>Home</li>
+        <li><a href="#"></a>Services</li>
+        <li><a href="#"></a>Project Members</li>
+        <li><a href="#"></a>About</li>
+      </ul>
+    </nav>
+    <a class="cta" href="index.php"><button class="logout">Logout</button></a>
+  </header>
+
+
+
+
+
+  <table class="content_table">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Joined Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php
+      include "connection.php";
+      $sql = "SELECT * FROM user_details;";
+      $result = $conn->query($sql);
+      if (!$result) {
+        die("Invalid query");
+      }
+      while ($row = $result->fetch_assoc()) {
+        echo "
+            <tr>
+              <th>$row[id]</th>
+              <td>$row[name]</td>
+              <td>$row[email]</td>
+              <td>$row[phone]</td>
+              <td>$row[join_date]</td>
+              <td><a href='edit.php?id=$row[id]'><button class='edit' type='submit'>Edit</button></a>
+              <a href='delete.php?id=$row[id]'><button class='delete' type='submit'>Delete</button></a></td>
+           </tr>";
+      }
+      ?>
+    </tbody>
+  </table>
+</body>
+
+</html>
